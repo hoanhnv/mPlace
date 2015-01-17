@@ -37,11 +37,11 @@
             <point key="canvasLocation" x="248" y="159"/>
         </view>
         <view contentMode="scaleToFill" id="3eE-8Z-oN3">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="759"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="748"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jIp-NQ-SVJ">
-                    <rect key="frame" x="0.0" y="191" width="280" height="406"/>
+                    <rect key="frame" x="0.0" y="191" width="280" height="395"/>
                     <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="sectionIndexBackgroundColor" red="1" green="0.49122168980000003" blue="0.2190178629" alpha="1" colorSpace="calibratedRGB"/>
@@ -112,7 +112,7 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oI4-0Y-2on">
-                    <rect key="frame" x="0.0" y="624" width="280" height="127"/>
+                    <rect key="frame" x="1" y="621" width="280" height="127"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="sectionIndexBackgroundColor" red="1" green="0.49122168980000003" blue="0.2190178629" alpha="1" colorSpace="calibratedRGB"/>
@@ -121,10 +121,26 @@
                         <outlet property="delegate" destination="-1" id="0j2-xr-861"/>
                     </connections>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tkM-JG-dSY">
+                    <rect key="frame" x="0.0" y="586" width="280" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.76078431369999999" green="0.76078431369999999" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bwV-rI-oxM">
+                    <rect key="frame" x="0.0" y="588" width="280" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="616" y="286.5"/>
+            <point key="canvasLocation" x="616" y="281"/>
         </view>
     </objects>
     <resources>

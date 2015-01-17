@@ -1,5 +1,5 @@
 //
-//  NVChiTietThuVienViewController.h
+//  NVDangYTuongViewController.h
 //  mPlace
 //
 //  Created by hoanhnv on 15/01/2015.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NVChiTietThuVienViewController : UIViewController{
-    
-}
+@interface NVDangYTuongViewController : UIViewController
 
 @end

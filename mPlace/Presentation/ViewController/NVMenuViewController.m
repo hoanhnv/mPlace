@@ -65,7 +65,7 @@
         [[Ultility shareInstant] setStatusLogin:@0];
     }
     
-    imagesFirst= [NSArray arrayWithObjects:@"ic_menu_home.png",@"icontuvan1.jpg",@"ic_menu_news.png",@"ic_100_places.png",@"ic_menu_placesave.png",@"ic_menu_search.png",@"ic_menu_search.png",@"giaothong",@"amnhac", nil];
+    imagesFirst= [NSArray arrayWithObjects:@"ic_menu_home.png",@"icontuvan1.jpg",@"ic_menu_news.png",@"ic_100_places.png",@"ic_menu_placesave.png",@"ic_menu_search.png",@"360.jpg",@"music.png",@"ic_menu_config.png", nil];
     imagesSecond = [NSArray arrayWithObjects:@"ic_menu_config.png",@"ic_menu_help.png",@"ic_menu_power.png", nil];
     // Do any additional setup after loading the view from its nib.
     
@@ -198,7 +198,7 @@
                 break;
             case 2:
             {
-                index = 8;
+                index = 11;
             }
                 break;
             default:

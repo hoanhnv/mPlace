@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -7,12 +7,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NV360ViewController">
             <connections>
+                <outlet property="nextButton" destination="TPy-5d-qsl" id="Opa-1b-aCO"/>
+                <outlet property="previourtButton" destination="2fz-rs-uYl" id="KJo-eh-ayw"/>
                 <outlet property="vIdeaMost" destination="oxP-l4-X8W" id="VTx-XN-cfq"/>
                 <outlet property="vImageMost" destination="9Bx-pf-2vo" id="LIt-k8-AeK"/>
                 <outlet property="vMainView" destination="UB5-9o-dsS" id="dWG-fK-JyI"/>
-                <outlet property="vMenuBottom" destination="CJR-Zb-31s" id="ypw-lW-phf"/>
+                <outlet property="vMenuBottom" destination="Gy5-r6-LE8" id="ss0-LW-VV7"/>
                 <outlet property="vMenuButton" destination="kjj-op-OgY" id="uIl-9i-9LH"/>
-                <outlet property="vSlideShow" destination="I6m-Xi-YVd" id="qEc-kv-spD"/>
+                <outlet property="vSlideShow" destination="I6m-Xi-YVd" id="YVi-Mg-svq"/>
                 <outlet property="vTopHeader" destination="iG3-dK-z0c" id="lLG-c5-n4a"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -67,16 +69,19 @@
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="156" y="341"/>
         </view>
-        <view contentMode="scaleToFill" id="I6m-Xi-YVd">
+        <view contentMode="scaleToFill" id="I6m-Xi-YVd" userLabel="view" customClass="iCarousel">
             <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" red="0.29486433220000002" green="0.56440224299999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="156" y="736.5"/>
+            <connections>
+                <outlet property="dataSource" destination="-1" id="iGO-WO-Ipg"/>
+                <outlet property="delegate" destination="-1" id="I1T-8V-3dC"/>
+            </connections>
         </view>
         <view contentMode="scaleToFill" id="kjj-op-OgY">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
@@ -117,7 +122,6 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="156" y="927"/>
         </view>
         <view contentMode="scaleToFill" id="9Bx-pf-2vo">
             <rect key="frame" x="0.0" y="0.0" width="320" height="266"/>
@@ -125,7 +129,6 @@
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="530" y="625"/>
         </view>
         <view contentMode="scaleToFill" id="oxP-l4-X8W">
             <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
@@ -133,83 +136,125 @@
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="530" y="330.5"/>
         </view>
-        <view contentMode="scaleToFill" id="CJR-Zb-31s">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="153"/>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2fz-rs-uYl">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <state key="normal" image="next.png">
+                <color key="titleColor" red="0.070588235289999995" green="0.074509803920000006" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <connections>
+                <action selector="nextOrPreviourSlideImageViewPreessed:" destination="-1" eventType="touchUpInside" id="idK-KQ-780"/>
+            </connections>
+        </button>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TPy-5d-qsl">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <state key="normal" image="next.png">
+                <color key="titleColor" red="0.070588235289999995" green="0.074509803920000006" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <connections>
+                <action selector="nextOrPreviourSlideImageViewPreessed:" destination="-1" eventType="touchUpInside" id="y4E-Gr-hBD"/>
+            </connections>
+        </button>
+        <view contentMode="scaleToFill" id="Gy5-r6-LE8">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="134"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FXr-1o-C4Y">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53l-XK-HnT">
+                    <rect key="frame" x="6" y="10" width="306" height="36"/>
                     <subviews>
-                        <button opaque="NO" tag="105" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kR6-rx-H0d">
-                            <rect key="frame" x="0.0" y="1" width="320" height="48"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffa-zB-YBH">
+                            <rect key="frame" x="0.0" y="0.0" width="306" height="33"/>
                             <state key="normal">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Đăng ảnh cảnh báo ATGT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYe-dK-mhr">
-                            <rect key="frame" x="46" y="1" width="274" height="48"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Canhbao_GT.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZUt-jH-wn8">
+                            <rect key="frame" x="6" y="9" width="21" height="17"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ĐĂNG ẢNH CẢNH BÁO ATGT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2PG-dk-2uA">
+                            <rect key="frame" x="35" y="8" width="245" height="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y6Y-kK-rVI">
-                            <rect key="frame" x="8" y="6" width="30" height="37"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="row4.png" translatesAutoresizingMaskIntoConstraints="NO" id="bzj-Mo-H1Q">
+                            <rect key="frame" x="288" y="13" width="10" height="10"/>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.89550639190000003" blue="0.1059135001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.76078431369999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E0T-92-TSt">
-                    <rect key="frame" x="0.0" y="104" width="320" height="49"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eya-2J-GoG">
+                    <rect key="frame" x="6" y="50" width="306" height="36"/>
                     <subviews>
-                        <button opaque="NO" tag="107" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oN-on-7N8">
-                            <rect key="frame" x="0.0" y="1" width="320" height="48"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXa-jW-D8X">
+                            <rect key="frame" x="0.0" y="0.0" width="306" height="33"/>
                             <state key="normal">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Đăng ảnh cảnh báo ATGT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkZ-rv-BGZ">
-                            <rect key="frame" x="48" y="1" width="272" height="48"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="donggop.png" translatesAutoresizingMaskIntoConstraints="NO" id="DRN-ey-jI4">
+                            <rect key="frame" x="6" y="9" width="21" height="17"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ĐĂNG Ý TƯỞNG ĐÓNG GÓP  ATGT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y9-6J-HSK">
+                            <rect key="frame" x="35" y="8" width="251" height="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q1v-Z3-6ZI">
-                            <rect key="frame" x="8" y="6" width="32" height="37"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="row4.png" translatesAutoresizingMaskIntoConstraints="NO" id="AQj-qw-p0n">
+                            <rect key="frame" x="288" y="13" width="10" height="10"/>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.89550639190000003" blue="0.1059135001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.76078431369999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egD-xs-dEY">
-                    <rect key="frame" x="0.0" y="52" width="320" height="49"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ySz-Wd-6Kf">
+                    <rect key="frame" x="8" y="90" width="306" height="36"/>
                     <subviews>
-                        <button opaque="NO" clearsContextBeforeDrawing="NO" tag="106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylo-WS-6fs">
-                            <rect key="frame" x="0.0" y="1" width="320" height="48"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiy-lS-1rC">
+                            <rect key="frame" x="0.0" y="0.0" width="306" height="33"/>
                             <state key="normal">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Đăng ý tưởng đóng góp về ATGT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2x-Ee-jxD">
-                            <rect key="frame" x="47" y="1" width="273" height="48"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gioithieu.png" translatesAutoresizingMaskIntoConstraints="NO" id="uN2-27-Qqa">
+                            <rect key="frame" x="6" y="9" width="21" height="20"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THỂ LỆ CUỘC THI ATGT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIs-lL-td4">
+                            <rect key="frame" x="35" y="8" width="245" height="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ivv-Qg-tad">
-                            <rect key="frame" x="8" y="8" width="31" height="33"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="row4.png" translatesAutoresizingMaskIntoConstraints="NO" id="HmV-yc-cmj">
+                            <rect key="frame" x="288" y="13" width="10" height="10"/>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.89550639190000003" blue="0.1059135001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.76078431369999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="522" y="887.5"/>
+            <point key="canvasLocation" x="412" y="99"/>
         </view>
     </objects>
     <resources>
+        <image name="Canhbao_GT.png" width="64" height="52"/>
+        <image name="donggop.png" width="65" height="50"/>
+        <image name="gioithieu.png" width="32" height="31"/>
         <image name="ic_menu.png" width="22" height="14"/>
+        <image name="next.png" width="8" height="13"/>
+        <image name="row4.png" width="10" height="16"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

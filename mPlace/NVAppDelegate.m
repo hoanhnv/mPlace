@@ -213,8 +213,6 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
             break;
         case 8:
         {
-            NSLog(@"da chon thoat");
-            [_menu loginFB];
             _navigation.viewControllers = [NSArray arrayWithObjects:_wifi, nil];//dang nhap
         }
             break;
@@ -223,7 +221,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
             //tuy chon
             _navigation.viewControllers = [NSArray arrayWithObjects:_tuychon, nil];
            
-        }
+        } break;
         case 10:
         {
             //ho tro
@@ -231,11 +229,15 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
            
         }
             break;
+        case 11:{
+            NSLog(@"da chon thoat");
+            [_menu loginFB];
+        }
+            break;
         default:
             break;
     }
 
-    
     [self toggleMenu];
 }
 
