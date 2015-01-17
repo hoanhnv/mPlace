@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6FE02AB4-C1D5-4900-93D2-4E5F1D940D60</string>
+	<key>IDESourceControlProjectName</key>
+	<string>mPlace</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3aff56c5-f96c-4356-9350-2b942dd1c2f0</key>
+		<string>http://xuanmai.hostingviet.vn/svn/dulich</string>
+		<key>540e74b4-00b2-4778-9a24-93a2ddde797d</key>
+		<string>http://192.168.12.140/svn_data</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>mPlace/IOS/mPlace_current/mPlace/mPlace.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3aff56c5-f96c-4356-9350-2b942dd1c2f0</key>
+		<string>../../../../../../../dulichsvn</string>
+		<key>540e74b4-00b2-4778-9a24-93a2ddde797d</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>540e74b4-00b2-4778-9a24-93a2ddde797d</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3aff56c5-f96c-4356-9350-2b942dd1c2f0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>dulichsvn</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>540e74b4-00b2-4778-9a24-93a2ddde797d</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NamVietSVN</string>
+		</dict>
+	</array>
+</dict>
+</plist>

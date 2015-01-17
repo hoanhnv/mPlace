@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers
+END
+PFLogInView.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFLogInView.h
+END
+PFSignUpViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFSignUpViewController.h
+END
+PFCloud.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFCloud.h
+END
+PFObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFObject.h
+END
+PFPurchase.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFPurchase.h
+END
+PFQueryTableViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFQueryTableViewController.h
+END
+PFConstants.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFConstants.h
+END
+PFRelation.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFRelation.h
+END
+PFPurchaseTableViewCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFPurchaseTableViewCell.h
+END
+PFImageView.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFImageView.h
+END
+PFUser.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFUser.h
+END
+PFObject+Subclass.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFObject+Subclass.h
+END
+PFTableViewCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFTableViewCell.h
+END
+PFTwitterUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFTwitterUtils.h
+END
+Parse.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/Parse.h
+END
+PFFacebookUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFFacebookUtils.h
+END
+PFACL.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFACL.h
+END
+PFSignUpView.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFSignUpView.h
+END
+PF_Twitter.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PF_Twitter.h
+END
+PFInstallation.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFInstallation.h
+END
+PF_EGORefreshTableHeaderView.h
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PF_EGORefreshTableHeaderView.h
+END
+PFQuery.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFQuery.h
+END
+PFLogInViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFLogInViewController.h
+END
+PFAnonymousUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFAnonymousUtils.h
+END
+PFSubclassing.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFSubclassing.h
+END
+PFPush.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFPush.h
+END
+PFFile.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFFile.h
+END
+PFProduct.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFProduct.h
+END
+PF_MBProgressHUD.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PF_MBProgressHUD.h
+END
+PFGeoPoint.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFGeoPoint.h
+END
+PFAnalytics.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFAnalytics.h
+END
+PFProductTableViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFProductTableViewController.h
+END
+PFRole.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn_data/!svn/ver/28/mPlace/IOS/mPlace_current/mPlace/Parse.framework/Versions/1.2.19/Headers/PFRole.h
+END
