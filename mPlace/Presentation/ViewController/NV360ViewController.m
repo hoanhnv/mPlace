@@ -7,8 +7,6 @@
 //
 
 #import "NV360ViewController.h"
-#import "iCarousel.h"
-
 @interface NV360ViewController ()
 @property (nonatomic,strong) NSMutableArray *slideListRoot;
 @end
