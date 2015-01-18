@@ -191,6 +191,16 @@
 		6FC1F98A1A6B6815005A06D4 /* Untitled-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC1F8F11A6B6815005A06D4 /* Untitled-1.png */; };
 		6FC1F98B1A6B6815005A06D4 /* ytuong_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC1F8F21A6B6815005A06D4 /* ytuong_button.png */; };
 		6FC1F9901A6B6DD6005A06D4 /* ImageButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1F98F1A6B6DD6005A06D4 /* ImageButtonView.m */; };
+		6FC1F9921A6B9DAE005A06D4 /* ytuongdatgiai.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC1F9911A6B9DAE005A06D4 /* ytuongdatgiai.png */; };
+		6FC1F9961A6BA246005A06D4 /* NVAnhCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1F9941A6BA246005A06D4 /* NVAnhCollectionViewCell.m */; };
+		6FC1F9971A6BA246005A06D4 /* NVAnhCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC1F9951A6BA246005A06D4 /* NVAnhCollectionViewCell.xib */; };
+		6FC1F99B1A6BA259005A06D4 /* NVYtuongCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1F9991A6BA259005A06D4 /* NVYtuongCollectionViewCell.m */; };
+		6FC1F99C1A6BA259005A06D4 /* NVYtuongCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC1F99A1A6BA259005A06D4 /* NVYtuongCollectionViewCell.xib */; };
+		6FC1F99F1A6BA340005A06D4 /* NVCollectionViewAlignLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1F99E1A6BA340005A06D4 /* NVCollectionViewAlignLayout.m */; };
+		6FC1F9A31A6BBAE2005A06D4 /* NVDangAnhViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1F9A11A6BBAE2005A06D4 /* NVDangAnhViewController.m */; };
+		6FC1F9A41A6BBAE2005A06D4 /* NVDangAnhViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC1F9A21A6BBAE2005A06D4 /* NVDangAnhViewController.xib */; };
+		6FC1F9A81A6BBB10005A06D4 /* NVDangYTuongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1F9A61A6BBB10005A06D4 /* NVDangYTuongViewController.m */; };
+		6FC1F9A91A6BBB10005A06D4 /* NVDangYTuongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC1F9A71A6BBB10005A06D4 /* NVDangYTuongViewController.xib */; };
 		6FC7E3FB1A5443B7008AD1D2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F727A79F19E22B810081AC78 /* Parse.framework */; };
 		6FD6BC8A1A66A7FF00CE9483 /* NV360ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6BC881A66A7FF00CE9483 /* NV360ViewController.m */; };
 		6FD6BC8B1A66A7FF00CE9483 /* NV360ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD6BC891A66A7FF00CE9483 /* NV360ViewController.xib */; };
@@ -711,6 +721,21 @@
 		6FC1F8F21A6B6815005A06D4 /* ytuong_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ytuong_button.png; sourceTree = "<group>"; };
 		6FC1F98E1A6B6DD6005A06D4 /* ImageButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageButtonView.h; sourceTree = "<group>"; };
 		6FC1F98F1A6B6DD6005A06D4 /* ImageButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageButtonView.m; sourceTree = "<group>"; };
+		6FC1F9911A6B9DAE005A06D4 /* ytuongdatgiai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ytuongdatgiai.png; sourceTree = "<group>"; };
+		6FC1F9931A6BA246005A06D4 /* NVAnhCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVAnhCollectionViewCell.h; sourceTree = "<group>"; };
+		6FC1F9941A6BA246005A06D4 /* NVAnhCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVAnhCollectionViewCell.m; sourceTree = "<group>"; };
+		6FC1F9951A6BA246005A06D4 /* NVAnhCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NVAnhCollectionViewCell.xib; sourceTree = "<group>"; };
+		6FC1F9981A6BA259005A06D4 /* NVYtuongCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVYtuongCollectionViewCell.h; sourceTree = "<group>"; };
+		6FC1F9991A6BA259005A06D4 /* NVYtuongCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVYtuongCollectionViewCell.m; sourceTree = "<group>"; };
+		6FC1F99A1A6BA259005A06D4 /* NVYtuongCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NVYtuongCollectionViewCell.xib; sourceTree = "<group>"; };
+		6FC1F99D1A6BA340005A06D4 /* NVCollectionViewAlignLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVCollectionViewAlignLayout.h; sourceTree = "<group>"; };
+		6FC1F99E1A6BA340005A06D4 /* NVCollectionViewAlignLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVCollectionViewAlignLayout.m; sourceTree = "<group>"; };
+		6FC1F9A01A6BBAE2005A06D4 /* NVDangAnhViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVDangAnhViewController.h; sourceTree = "<group>"; };
+		6FC1F9A11A6BBAE2005A06D4 /* NVDangAnhViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVDangAnhViewController.m; sourceTree = "<group>"; };
+		6FC1F9A21A6BBAE2005A06D4 /* NVDangAnhViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NVDangAnhViewController.xib; sourceTree = "<group>"; };
+		6FC1F9A51A6BBB10005A06D4 /* NVDangYTuongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVDangYTuongViewController.h; sourceTree = "<group>"; };
+		6FC1F9A61A6BBB10005A06D4 /* NVDangYTuongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVDangYTuongViewController.m; sourceTree = "<group>"; };
+		6FC1F9A71A6BBB10005A06D4 /* NVDangYTuongViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NVDangYTuongViewController.xib; sourceTree = "<group>"; };
 		6FD6BC871A66A7FF00CE9483 /* NV360ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NV360ViewController.h; sourceTree = "<group>"; };
 		6FD6BC881A66A7FF00CE9483 /* NV360ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NV360ViewController.m; sourceTree = "<group>"; };
 		6FD6BC891A66A7FF00CE9483 /* NV360ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NV360ViewController.xib; sourceTree = "<group>"; };
@@ -1202,6 +1227,14 @@
 		6FC1F98D1A6B6D9B005A06D4 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				6FC1F99D1A6BA340005A06D4 /* NVCollectionViewAlignLayout.h */,
+				6FC1F99E1A6BA340005A06D4 /* NVCollectionViewAlignLayout.m */,
+				6FC1F9981A6BA259005A06D4 /* NVYtuongCollectionViewCell.h */,
+				6FC1F9991A6BA259005A06D4 /* NVYtuongCollectionViewCell.m */,
+				6FC1F99A1A6BA259005A06D4 /* NVYtuongCollectionViewCell.xib */,
+				6FC1F9931A6BA246005A06D4 /* NVAnhCollectionViewCell.h */,
+				6FC1F9941A6BA246005A06D4 /* NVAnhCollectionViewCell.m */,
+				6FC1F9951A6BA246005A06D4 /* NVAnhCollectionViewCell.xib */,
 				6FC1F98E1A6B6DD6005A06D4 /* ImageButtonView.h */,
 				6FC1F98F1A6B6DD6005A06D4 /* ImageButtonView.m */,
 			);
@@ -1258,6 +1291,9 @@
 		6FD6C66C1A60D4C300F57F1F /* AnhCanhBao */ = {
 			isa = PBXGroup;
 			children = (
+				6FC1F9A01A6BBAE2005A06D4 /* NVDangAnhViewController.h */,
+				6FC1F9A11A6BBAE2005A06D4 /* NVDangAnhViewController.m */,
+				6FC1F9A21A6BBAE2005A06D4 /* NVDangAnhViewController.xib */,
 				6F42BE6B1A62CC3100FA430D /* NVAnhCanhBaoViewController.h */,
 				6F42BE6C1A62CC3100FA430D /* NVAnhCanhBaoViewController.m */,
 				6F42BE6D1A62CC3100FA430D /* NVAnhCanhBaoViewController.xib */,
@@ -1271,6 +1307,9 @@
 		6FD6C66D1A60D4FA00F57F1F /* YTuong */ = {
 			isa = PBXGroup;
 			children = (
+				6FC1F9A51A6BBB10005A06D4 /* NVDangYTuongViewController.h */,
+				6FC1F9A61A6BBB10005A06D4 /* NVDangYTuongViewController.m */,
+				6FC1F9A71A6BBB10005A06D4 /* NVDangYTuongViewController.xib */,
 				6F42BE661A62CC1600FA430D /* NVYTuongViewController.h */,
 				6F42BE671A62CC1700FA430D /* NVYTuongViewController.m */,
 				6F42BE681A62CC1700FA430D /* NVYTuongViewController.xib */,
@@ -1761,6 +1800,7 @@
 				6FC1F8D91A6B6815005A06D4 /* icon_bookmarkchitiet_selected.png */,
 				6FC1F8DA1A6B6815005A06D4 /* icon_share_facebook.png */,
 				6FC1F8DB1A6B6815005A06D4 /* icon_user.png */,
+				6FC1F9911A6B9DAE005A06D4 /* ytuongdatgiai.png */,
 				6FC1F8DC1A6B6815005A06D4 /* icon-warning-1.png */,
 				6FC1F8DD1A6B6815005A06D4 /* icon-warning-2.png */,
 				6FC1F8DE1A6B6815005A06D4 /* icon-warning-3.png */,
@@ -2216,6 +2256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FC1F9341A6B6815005A06D4 /* ic_doC.png in Resources */,
+				6FC1F9A41A6BBAE2005A06D4 /* NVDangAnhViewController.xib in Resources */,
 				6FC1F8FB1A6B6815005A06D4 /* backgroud_title.png in Resources */,
 				F7E1760219E7C14A00BE3870 /* ic_search_price.png in Resources */,
 				F7AE96F019D3F4110009178D /* ic_detail_info@2x.png in Resources */,
@@ -2279,6 +2320,7 @@
 				6FC1F92C1A6B6815005A06D4 /* ic_detail_save_on.png in Resources */,
 				6F6DAED71A6B66B100DB367A /* anh_button.png in Resources */,
 				F7E1760519E7C14A00BE3870 /* ic_seatch_service@2x.png in Resources */,
+				6FC1F99C1A6BA259005A06D4 /* NVYtuongCollectionViewCell.xib in Resources */,
 				F7AE973419D3F4110009178D /* ic_panorama@2x.png in Resources */,
 				6FC1F96F1A6B6815005A06D4 /* ic_wifi_signin_password@2x.png in Resources */,
 				6FC1F9501A6B6815005A06D4 /* ic_home_sea.png in Resources */,
@@ -2323,6 +2365,7 @@
 				F7AE970519D3F4110009178D /* ic_doC.png in Resources */,
 				6FC1F9591A6B6815005A06D4 /* ic_menu_love@2x.png in Resources */,
 				F7AE972419D3F4110009178D /* ic_menu_config@2x.png in Resources */,
+				6FC1F9A91A6BBB10005A06D4 /* NVDangYTuongViewController.xib in Resources */,
 				F77E806319D643990034D7F7 /* mPlace140.png in Resources */,
 				F7AE972F19D3F4110009178D /* ic_menu_power.png in Resources */,
 				F7AE972D19D3F4110009178D /* ic_menu_placesave.png in Resources */,
@@ -2395,6 +2438,7 @@
 				6FC1F95F1A6B6815005A06D4 /* ic_menu_power@2x.png in Resources */,
 				6FC1F9231A6B6815005A06D4 /* ic_detail_like@2x.png in Resources */,
 				6FC1F9611A6B6815005A06D4 /* ic_menu_search@2x.png in Resources */,
+				6FC1F9971A6BA246005A06D4 /* NVAnhCollectionViewCell.xib in Resources */,
 				6FC1F8F81A6B6815005A06D4 /* back1@2x.png in Resources */,
 				6FC1F9471A6B6815005A06D4 /* ic_filter@2x.png in Resources */,
 				F7E03D0F19D550A4009ECDE3 /* tin1_1.png in Resources */,
@@ -2402,6 +2446,7 @@
 				6FC1F8FE1A6B6815005A06D4 /* bg_search1.png in Resources */,
 				F7AE972B19D3F4110009178D /* ic_menu_news.png in Resources */,
 				6FC1F9161A6B6815005A06D4 /* ic_search_rate.png in Resources */,
+				6FC1F9921A6B9DAE005A06D4 /* ytuongdatgiai.png in Resources */,
 				F7E03D1119D550A4009ECDE3 /* tin3_3.png in Resources */,
 				F7E1760119E7C14A00BE3870 /* ic_search_favorite@2x.png in Resources */,
 				F7AE971019D3F4110009178D /* ic_filter_picture@2x.png in Resources */,
@@ -2585,6 +2630,7 @@
 				F7DA979F19D40B090060F551 /* NVDetailDiaDiemViewController.m in Sources */,
 				F73057C21A01E649009B6FC1 /* NVGetTinTucService.m in Sources */,
 				F7556FBE1A19FA0C0038D8D4 /* NVLoginWifiViewController.m in Sources */,
+				6FC1F99F1A6BA340005A06D4 /* NVCollectionViewAlignLayout.m in Sources */,
 				F714258B19D50D3A0068B5FA /* FMDatabase.m in Sources */,
 				6F42BE541A62CACD00FA430D /* NVGetAnhCanhBaoService.m in Sources */,
 				F71425B019D50D3A0068B5FA /* UIProgressView+AFNetworking.m in Sources */,
@@ -2611,6 +2657,7 @@
 				F7CD93821A1AF852000CDDA8 /* NVNewTinTucTableViewCell.m in Sources */,
 				6F42BE5A1A62CB0600FA430D /* NVAnhCanhBaoDatabase.m in Sources */,
 				6FD6BC991A66DB6700CE9483 /* NVChiTietThuVienViewController.m in Sources */,
+				6FC1F9A31A6BBAE2005A06D4 /* NVDangAnhViewController.m in Sources */,
 				6F42BE6E1A62CC3100FA430D /* NVAnhCanhBaoViewController.m in Sources */,
 				F7BDCEBA1A0C6455001FB0DB /* NVListTinTucViewController.m in Sources */,
 				F714259819D50D3A0068B5FA /* SBJsonStreamParserState.m in Sources */,
@@ -2644,6 +2691,7 @@
 				F714259119D50D3A0068B5FA /* AsyncImageView.m in Sources */,
 				F71425AA19D50D3A0068B5FA /* STCollapseTableView.m in Sources */,
 				F714259519D50D3A0068B5FA /* SBJsonStreamParser.m in Sources */,
+				6FC1F99B1A6BA259005A06D4 /* NVYtuongCollectionViewCell.m in Sources */,
 				6FD6BC8A1A66A7FF00CE9483 /* NV360ViewController.m in Sources */,
 				F709BB261A295DB600B0BC89 /* NVCanMangTheoViewController.m in Sources */,
 				6FD6BC8F1A66D43F00CE9483 /* NVAnhChiTietViewController.m in Sources */,
@@ -2657,6 +2705,7 @@
 				F714259B19D50D3A0068B5FA /* SBJsonStreamWriterAccumulator.m in Sources */,
 				F7E776941A1EE2C800BA5908 /* NVTinTucCategory.m in Sources */,
 				F71425AF19D50D3A0068B5FA /* UIImageView+AFNetworking.m in Sources */,
+				6FC1F9961A6BA246005A06D4 /* NVAnhCollectionViewCell.m in Sources */,
 				F7CD939A1A1B33B0000CDDA8 /* NVWeatherTableViewCell.m in Sources */,
 				F714258819D50D3A0068B5FA /* AFURLResponseSerialization.m in Sources */,
 				6FC1F9901A6B6DD6005A06D4 /* ImageButtonView.m in Sources */,
@@ -2669,6 +2718,7 @@
 				F7FCCC5C19F8BDE40078419D /* NVCity.m in Sources */,
 				F71425AE19D50D3A0068B5FA /* UIButton+AFNetworking.m in Sources */,
 				F71425B119D50D3A0068B5FA /* UIRefreshControl+AFNetworking.m in Sources */,
+				6FC1F9A81A6BBB10005A06D4 /* NVDangYTuongViewController.m in Sources */,
 				F70A46F419F9FBE7006D9689 /* NVHoTroViewController.m in Sources */,
 				F744667119DA9CFD00E6B044 /* NVShowAllLocationTableViewCell.m in Sources */,
 				6F42BE4E1A62CA9D00FA430D /* NVYTuongBO.m in Sources */,

@@ -8,36 +8,36 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="NVAnhCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="145" height="159"/>
+            <rect key="frame" x="0.0" y="0.0" width="136" height="180"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="145" height="159"/>
+                <rect key="frame" x="0.0" y="0.0" width="136" height="180"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rgC-ET-Rvw">
-                        <rect key="frame" x="0.0" y="0.0" width="145" height="99"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqZ-o3-ju7">
-                        <rect key="frame" x="0.0" y="100" width="142" height="33"/>
+                        <rect key="frame" x="3" y="110" width="131" height="42"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.047058823529411764" green="0.21176470588235294" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Địa điểm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rke-pH-3Yr">
-                        <rect key="frame" x="0.0" y="138" width="134" height="21"/>
+                        <rect key="frame" x="3" y="159" width="131" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rgC-ET-Rvw">
+                        <rect key="frame" x="3" y="4" width="131" height="99"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <size key="customSize" width="164" height="159"/>
+            <size key="customSize" width="164" height="179"/>
             <connections>
                 <outlet property="imgTitle" destination="rgC-ET-Rvw" id="vQO-7m-Qfp"/>
                 <outlet property="lbPlace" destination="Rke-pH-3Yr" id="cGM-oM-UnD"/>
                 <outlet property="lbTitle" destination="UqZ-o3-ju7" id="zMM-oP-cAf"/>
             </connections>
-            <point key="canvasLocation" x="241.5" y="358.5"/>
+            <point key="canvasLocation" x="241" y="368"/>
         </collectionViewCell>
     </objects>
 </document>

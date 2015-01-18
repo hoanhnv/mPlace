@@ -7,6 +7,21 @@
 //
 
 #import "NV360ViewController.h"
+#import "NVAnhCanhBaoViewController.h"
+#import "NVYTuongViewController.h"
+#import "NVAnhCollectionViewCell.h"
+#import "NVYtuongCollectionViewCell.h"
+#import "NVCollectionViewAlignLayout.h"
+#import "NVThuVienViewController.h"
+
+#define TagCollectionViewAnh 226
+#define TagCollectionViewYtuong 227
+#define CellWidth 148
+#define CellAnhHeight 180
+#define CellYtuongHeight 110
+#define CellIDAnh @"cellIdAnh"
+#define CellIDYtuong @"cellIdYtuong"
+
 @interface NV360ViewController ()
 @property (nonatomic,strong) NSMutableArray *slideListRoot;
 @end
@@ -19,6 +34,7 @@
     [self prepareComponentViews];
     [self loadDataToComponentViews];
     [self loadListSlideShowImageView];
+    [self setupCollectioView];
     
 }
 
@@ -47,13 +63,13 @@
     [self.vMainView addSubview:self.previourtButton];
     [self.vMainView addSubview:self.nextButton];
     
-    self.vMenuButton.frame = CGRectMake(0, CGRectGetMaxY(self.vSlideShow.frame), rectMain.size.width, 50);
+    self.vMenuButton.frame = CGRectMake(0, CGRectGetMaxY(self.vSlideShow.frame), rectMain.size.width, 78);
     [self.vMainView addSubview:self.vMenuButton];
     
-    self.vImageMost.frame = CGRectMake(0, CGRectGetMaxY(self.vMenuButton.frame), rectMain.size.width, 150);
+    self.vImageMost.frame = CGRectMake(0, CGRectGetMaxY(self.vMenuButton.frame), rectMain.size.width, 446);
     [self.vMainView addSubview:self.vImageMost];
     
-    self.vIdeaMost.frame = CGRectMake(0, CGRectGetMaxY(self.vImageMost.frame), rectMain.size.width, 150);
+    self.vIdeaMost.frame = CGRectMake(0, CGRectGetMaxY(self.vImageMost.frame), rectMain.size.width, 258);
     [self.vMainView addSubview:self.vIdeaMost];
     
     self.vMenuBottom.frame = CGRectMake(0, CGRectGetMaxY(self.vIdeaMost.frame), rectMain.size.width, 120);
@@ -62,9 +78,30 @@
     [self.vMainView setContentSize:CGSizeMake(rectMain.size.width, CGRectGetMaxY(self.vMenuBottom.frame)+20)];
 }
 -(void)loadDataToComponentViews{
-    //self.arrMenuBottom = [NSArray arrayWithObjects:@"Đăng ảnh cảnh báo ATGT",@"Đăng ý tưởng đóng góp về ATGT",@"Thể lệ cuộc thi 360º ATGT", nil];
+    
 }
+-(void)setupCollectioView{
+    NVCollectionViewAlignLayout *layoutAnh = [[NVCollectionViewAlignLayout alloc]init];
+    layoutAnh.minimumInteritemSpacing = 8.0f;
+    //flowLayout.minimumLineSpacing = 10.0f;
+    layoutAnh.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    layoutAnh.itemSize = CGSizeMake(CellWidth, CellAnhHeight);
+    layoutAnh.scrollDirection = UICollectionViewScrollDirectionVertical;
+    
+    self.listImageCollectionView.collectionViewLayout = layoutAnh;
+    [self.listImageCollectionView registerNib:[UINib nibWithNibName:@"NVAnhCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:CellIDAnh];
+    
+    NVCollectionViewAlignLayout *layoutYtuong = [[NVCollectionViewAlignLayout alloc]init];
+    layoutYtuong.minimumInteritemSpacing = 8.0;
+    //flowLayout.minimumLineSpacing = 10.0f;
+    layoutYtuong.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    layoutYtuong.itemSize = CGSizeMake(CellWidth, CellYtuongHeight);
+    layoutYtuong.scrollDirection = UICollectionViewScrollDirectionVertical;
 
+    self.listYtuongCollectionView.collectionViewLayout = layoutYtuong;
+    [self.listYtuongCollectionView registerNib:[UINib nibWithNibName:@"NVYtuongCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:CellIDYtuong];
+    
+}
 - (void) loadListSlideShowImageView {
     self.vSlideShow.type = iCarouselTypeRotary;
     self.vSlideShow.decelerationRate = 0.5;
@@ -87,6 +124,52 @@
     [self.vSlideShow reloadData];
 }
 
+#pragma mark - UICollectionViewDataSource Methods
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 4;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    float heightCell;
+    if (collectionView.tag == TagCollectionViewAnh) {
+        NVAnhCollectionViewCell *cell = (NVAnhCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIDAnh forIndexPath:indexPath];
+        heightCell = [cell configCellWithObject:indexPath.row];
+        return cell;
+    }
+    else{
+        NVYtuongCollectionViewCell *cell = (NVYtuongCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIDYtuong forIndexPath:indexPath];
+         [cell configCellWithObject:nil];
+        return cell;
+    }
+}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (collectionView.tag == TagCollectionViewAnh) {
+         return CGSizeMake(CellWidth,CellAnhHeight);
+    }
+    if (collectionView.tag == TagCollectionViewYtuong) {
+        return CGSizeMake(CellWidth,CellYtuongHeight);
+    }
+    return CGSizeZero;
+//    return [[NVAnhCollectionViewCell new]getCellSizeWithItem:indexPath.row];
+}
+
+//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+//    return 10;
+//}
+//// Layout: Set Edges
+//- (UIEdgeInsets)collectionView:
+//(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+//    
+//    return UIEdgeInsetsMake(0, 0, 0, 0);  // top, left, bottom, right
+//}
+
 - (IBAction)showLeftMenu:(id)sender {
 
     [Appdelegate toggleMenu];
@@ -101,14 +184,20 @@
     switch (btn.tag) {
         case 101:
         {
+            NVDangAnhViewController *dangAnhVC = [[NVDangAnhViewController alloc]initWithNibName:@"NVDangAnhViewController" bundle:nil];
+            [self.navigationController pushViewController:dangAnhVC animated:YES];
             break;
         }
         case 102:
         {
+            NVDangYTuongViewController *dangYtuongVC = [[NVDangYTuongViewController alloc]initWithNibName:@"NVDangYTuongViewController" bundle:nil];
+            [self.navigationController pushViewController:dangYtuongVC animated:YES];
             break;
         }
         case 103:
         {
+            NVThuVienViewController *thuVienVC = [[NVThuVienViewController alloc]initWithNibName:@"NVThuVienViewController" bundle:nil];
+            [self.navigationController pushViewController:thuVienVC animated:YES];
             break;
         }
         case 104:
@@ -125,14 +214,19 @@
     switch (btn.tag) {
         case 105:
         {
+            NVDangAnhViewController *dangAnhVC = [[NVDangAnhViewController alloc]initWithNibName:@"NVDangAnhViewController" bundle:nil];
+            [self.navigationController pushViewController:dangAnhVC animated:YES];
             break;
         }
         case 106:
         {
+            NVDangYTuongViewController *dangYtuongVC = [[NVDangYTuongViewController alloc]initWithNibName:@"NVDangYTuongViewController" bundle:nil];
+            [self.navigationController pushViewController:dangYtuongVC animated:YES];
             break;
         }
         case 107:
         {
+            
             break;
         }
         default:
@@ -149,6 +243,20 @@
         index -= 1;
     }
     [self.vSlideShow scrollToItemAtIndex:index animated:YES];
+}
+
+- (IBAction)doViewAll:(id)sender {
+    UIButton *btn = (UIButton*)sender;
+    if (btn.tag == 662) {
+        NVAnhCanhBaoViewController *anhCanhBaoVC = [[NVAnhCanhBaoViewController alloc]initWithNibName:@"NVAnhCanhBaoViewController" bundle:nil];
+        [self.navigationController pushViewController:anhCanhBaoVC animated:YES];
+        
+    }
+    else if (btn.tag == 663){
+        NVYTuongViewController *yTuongVC = [[NVYTuongViewController alloc]initWithNibName:@"NVYTuongViewController" bundle:nil];
+        [self.navigationController pushViewController:yTuongVC animated:YES];
+        
+    }
 }
 
 #pragma mark iCarousel methods

@@ -34,4 +34,48 @@
 }
 */
 
+-(void)loadViewWithButton:(UIButton*)btn{
+    [UIView animateWithDuration:1.0 animations:^{
+        CGRect flbIndicator = self.lbIndicator.frame;
+        flbIndicator.origin.x = btn.frame.origin.x;
+        self.lbIndicator.frame = flbIndicator;
+    }];
+    [self loadViewWithTab:btn.tag];
+    
+}
+-(void)loadViewWithTab:(int)index{
+    switch (index) {
+        case 200:{
+            
+        }
+            break;
+        case 201:{
+            
+        }
+            break;
+        case 202:{
+            
+        }
+            break;
+        case 203:{
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+- (IBAction)doTabClick:(id)sender {
+    UIButton *btn = (UIButton*)sender;
+    [self loadViewWithButton:btn];
+}
+- (IBAction)showLeftMenu:(id)sender {
+    
+    [Appdelegate toggleMenu];
+}
+
+- (IBAction)doSearch:(id)sender {
+    
+}
 @end

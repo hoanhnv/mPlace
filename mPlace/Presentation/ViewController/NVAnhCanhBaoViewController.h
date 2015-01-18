@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NVDangAnhViewController.h"
+@interface NVAnhCanhBaoViewController : UIViewController{
+    
+}
 
-@interface NVAnhCanhBaoViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UICollectionView *listImageCollectionView;
+
+- (IBAction)showLeftMenu:(id)sender;
+- (IBAction)doSearch:(id)sender;
+- (IBAction)doDanganh:(id)sender;
 
 @end

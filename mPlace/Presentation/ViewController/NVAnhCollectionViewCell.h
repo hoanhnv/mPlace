@@ -16,4 +16,5 @@
 
 -(int)configCellWithObject:(int)index;
 +(CGSize)getCellSizeWithItem:(int)index;
+
 @end

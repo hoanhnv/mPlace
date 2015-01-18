@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIView *vMiddleBG;
 @property (weak, nonatomic) IBOutlet UICollectionView *tourCollectionView;
 
+- (IBAction)showLeftMenu:(id)sender;
+
 @end

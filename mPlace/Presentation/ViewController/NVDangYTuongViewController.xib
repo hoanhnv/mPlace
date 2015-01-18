@@ -224,7 +224,7 @@
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dienthoai.png" translatesAutoresizingMaskIntoConstraints="NO" id="lp2-Oa-pOY">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_detail_goto.png" translatesAutoresizingMaskIntoConstraints="NO" id="lp2-Oa-pOY">
                             <rect key="frame" x="103" y="5" width="28" height="28"/>
                         </imageView>
                     </subviews>
@@ -242,6 +242,7 @@
         <image name="canhbao.png" width="50" height="50"/>
         <image name="diadiem.png" width="40" height="58"/>
         <image name="dienthoai.png" width="50" height="49"/>
+        <image name="ic_detail_goto.png" width="25" height="25"/>
         <image name="ic_menu.png" width="22" height="14"/>
         <image name="icon_ideas-1.png" width="32" height="31"/>
         <image name="search234.png" width="39" height="39"/>

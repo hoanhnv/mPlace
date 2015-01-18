@@ -12,10 +12,11 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.backgroundColor = [UIColor whiteColor];
 }
 -(int)configCellWithObject:(int)index{
     float heightTemp = 0;
-    imgTitle.image = [UIImage imageNamed:@"2.jpg"];
+    imgTitle.image = [UIImage imageNamed:@"tin4_4.png"];
     heightTemp += imgTitle.frame.size.height;
     
     lbTitle.numberOfLines = 0; // allows label to have as many lines as needed

@@ -36,4 +36,37 @@
 -(void)prepareComponentViews{
     self.vMiddleBG.backgroundColor = [UIColor colorWithRed:231.0f/255 green:66/255.0f blue:37/255.0f alpha:1.0];
 }
+
+
+#pragma mark - UICollectionViewDataSource Methods
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 4;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    //    float heightCell;
+    //    if (collectionView.tag == TagCollectionViewAnh) {
+    //        NVAnhCollectionViewCell *cell = (NVAnhCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIDAnh forIndexPath:indexPath];
+    //        heightCell = [cell configCellWithObject:indexPath.row];
+    //        return cell;
+    //    }
+    //    else{
+    //        NVYtuongCollectionViewCell *cell = (NVYtuongCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIDYtuong forIndexPath:indexPath];
+    //        [cell configCellWithObject:nil];
+    //        return cell;
+    //    }
+    return nil;
+}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeZero;
+    //    return [[NVAnhCollectionViewCell new]getCellSizeWithItem:indexPath.row];
+}
+
 @end

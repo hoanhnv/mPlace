@@ -22,7 +22,9 @@
 
 
 @property (strong, nonatomic) IBOutlet UIView *vMenuButton;
+@property (weak, nonatomic) IBOutlet UICollectionView *listImageCollectionView;
 @property (strong, nonatomic) IBOutlet UIView *vImageMost;
+@property (weak, nonatomic) IBOutlet UICollectionView *listYtuongCollectionView;
 @property (strong, nonatomic) IBOutlet UIView *vIdeaMost;
 @property (strong, nonatomic) IBOutlet UIView *vMenuBottom;
 @property (nonatomic,strong) NSTimer *timer;
@@ -33,6 +35,7 @@
 - (IBAction)doClickMenuBottom:(id)sender;
 - (IBAction)nextOrPreviourSlideImageViewPreessed:(id)sender;
 
+- (IBAction)doViewAll:(id)sender;
 
 
 

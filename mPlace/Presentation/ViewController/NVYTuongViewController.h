@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NVDangYTuongViewController.h"
+@interface NVYTuongViewController : UIViewController{
+    
+}
 
-@interface NVYTuongViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UICollectionView *listYtuongCollectionView;
 
+@property (weak, nonatomic) IBOutlet UILabel *lbIndicator;
+- (IBAction)doTabClick:(id)sender;
+- (IBAction)doDangYtuongClick:(id)sender;
+
+- (IBAction)showLeftMenu:(id)sender;
+- (IBAction)doSearch:(id)sender;
 @end

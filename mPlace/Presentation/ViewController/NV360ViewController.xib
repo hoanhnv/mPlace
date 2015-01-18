@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NV360ViewController">
             <connections>
+                <outlet property="listImageCollectionView" destination="FRa-mB-ghl" id="2bD-Cj-ldb"/>
+                <outlet property="listYtuongCollectionView" destination="bJP-ro-f7z" id="KIp-Rs-lOA"/>
                 <outlet property="nextButton" destination="TPy-5d-qsl" id="Opa-1b-aCO"/>
                 <outlet property="previourtButton" destination="2fz-rs-uYl" id="KJo-eh-ayw"/>
                 <outlet property="vIdeaMost" destination="oxP-l4-X8W" id="VTx-XN-cfq"/>
@@ -52,12 +54,13 @@
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UB5-9o-dsS">
                     <rect key="frame" x="0.0" y="61" width="320" height="419"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-113" y="55"/>
+            <point key="canvasLocation" x="-123" y="-121"/>
         </view>
         <view contentMode="scaleToFill" id="I6m-Xi-YVd" userLabel="view" customClass="iCarousel">
             <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
@@ -69,65 +72,189 @@
                 <outlet property="dataSource" destination="-1" id="iGO-WO-Ipg"/>
                 <outlet property="delegate" destination="-1" id="I1T-8V-3dC"/>
             </connections>
+            <point key="canvasLocation" x="260" y="-261.5"/>
         </view>
         <view contentMode="scaleToFill" id="kjj-op-OgY">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSQ-By-8jw">
-                    <rect key="frame" x="80" y="0.0" width="80" height="50"/>
+                <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSQ-By-8jw">
+                    <rect key="frame" x="80" y="0.0" width="80" height="74"/>
                     <color key="backgroundColor" red="1" green="0.36410616969999998" blue="0.16393378659999999" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Đóng góp ý tưởng" backgroundImage="ytuong_button.png">
+                    <inset key="imageEdgeInsets" minX="25" minY="8" maxX="25" maxY="42"/>
+                    <state key="normal" image="donggop.png" backgroundImage="ytuong_button.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="doClickMenuButton:" destination="-1" eventType="touchUpInside" id="ZQN-iF-Nir"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IED-te-tXO">
-                    <rect key="frame" x="160" y="0.0" width="80" height="50"/>
+                <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IED-te-tXO">
+                    <rect key="frame" x="160" y="0.0" width="80" height="74"/>
                     <color key="backgroundColor" red="1" green="0.36410616969999998" blue="0.16393378659999999" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Thư viện ATGT" backgroundImage="thuvien_button.png">
+                    <inset key="imageEdgeInsets" minX="25" minY="8" maxX="25" maxY="42"/>
+                    <state key="normal" image="thuvien.png" backgroundImage="thuvien_button.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" tag="104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFT-a4-544">
-                    <rect key="frame" x="240" y="0.0" width="80" height="50"/>
+                <button opaque="NO" tag="104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFT-a4-544">
+                    <rect key="frame" x="240" y="0.0" width="80" height="74"/>
                     <color key="backgroundColor" red="1" green="0.36410616969999998" blue="0.16393378659999999" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Thi tìm hiểu ATGT" backgroundImage="atgt_button.png">
+                    <inset key="imageEdgeInsets" minX="25" minY="8" maxX="25" maxY="42"/>
+                    <state key="normal" image="bienbao.png" backgroundImage="atgt_button.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P0v-Bz-td4">
-                    <rect key="frame" x="0.0" y="0.0" width="79" height="52"/>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0v-Bz-td4">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="74"/>
                     <color key="backgroundColor" red="1" green="0.36410616969999998" blue="0.16393378659999999" alpha="1" colorSpace="calibratedRGB"/>
                     <inset key="titleEdgeInsets" minX="0.0" minY="30" maxX="10" maxY="0.0"/>
-                    <inset key="imageEdgeInsets" minX="20" minY="5" maxX="20" maxY="30"/>
-                    <state key="normal" image="Canhbao_GT.png" backgroundImage="anh_button.png">
-                        <attributedString key="attributedTitle"/>
-                    </state>
+                    <inset key="imageEdgeInsets" minX="25" minY="8" maxX="25" maxY="42"/>
+                    <state key="normal" title="" image="Canhbao_GT.png" backgroundImage="anh_button.png"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thư viện ATGT" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7U-rh-1zd">
+                    <rect key="frame" x="160" y="39" width="80" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thi tìm hiểu ATGT" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmJ-A1-Y0x">
+                    <rect key="frame" x="240" y="39" width="80" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Đóng góp ý tưởng" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sX-yW-Y9s">
+                    <rect key="frame" x="80" y="39" width="80" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ảnh cảnh báo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fg-QO-dOd">
+                    <rect key="frame" x="0.0" y="39" width="80" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="265" y="-57"/>
         </view>
         <view contentMode="scaleToFill" id="9Bx-pf-2vo">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="266"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroud_title.png" translatesAutoresizingMaskIntoConstraints="NO" id="woo-oz-8O7">
+                    <rect key="frame" x="8" y="0.0" width="304" height="38"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="anhgiai.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Tq-HF-EIn">
+                    <rect key="frame" x="18" y="6" width="24" height="24"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ẢNH ĐOẠT GIẢI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qap-p6-Y9v">
+                    <rect key="frame" x="50" y="6" width="175" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tất cả" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijs-HH-nIy">
+                    <rect key="frame" x="255" y="9" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="next.png" translatesAutoresizingMaskIntoConstraints="NO" id="QRW-Ub-ZR5">
+                    <rect key="frame" x="298" y="15" width="8" height="8"/>
+                </imageView>
+                <button opaque="NO" tag="662" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHa-Z9-ug0">
+                    <rect key="frame" x="255" y="2" width="57" height="32"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doViewAll:" destination="-1" eventType="touchUpInside" id="giB-pc-TzF"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="226" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FRa-mB-ghl">
+                    <rect key="frame" x="8" y="41" width="304" height="390"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MOH-7S-pqY">
+                        <size key="itemSize" width="136" height="180"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="b78-zI-mwU"/>
+                        <outlet property="delegate" destination="-1" id="ePV-Kb-fUz"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-123" y="376"/>
         </view>
         <view contentMode="scaleToFill" id="oxP-l4-X8W">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="258"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroud_title.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dbz-84-GMj">
+                    <rect key="frame" x="8" y="0.0" width="304" height="38"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ytuongdatgiai.png" translatesAutoresizingMaskIntoConstraints="NO" id="2hH-iO-7Tw">
+                    <rect key="frame" x="20" y="6" width="24" height="24"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ý TƯỞNG ĐOẠT GIẢI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJJ-vp-peV">
+                    <rect key="frame" x="57" y="8" width="175" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tất cả" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAM-vf-NaN">
+                    <rect key="frame" x="255" y="8" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="next.png" translatesAutoresizingMaskIntoConstraints="NO" id="YGR-lJ-Fap">
+                    <rect key="frame" x="298" y="15" width="8" height="8"/>
+                </imageView>
+                <button opaque="NO" tag="663" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCp-t7-bLk">
+                    <rect key="frame" x="255" y="2" width="57" height="32"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doViewAll:" destination="-1" eventType="touchUpInside" id="wJx-a7-Nkn"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="227" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bJP-ro-f7z">
+                    <rect key="frame" x="8" y="42" width="304" height="210"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UV2-3c-uaQ">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="t0z-ly-qM9"/>
+                        <outlet property="delegate" destination="-1" id="DtM-tB-QEe"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="265" y="301"/>
         </view>
         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2fz-rs-uYl">
-            <rect key="frame" x="0.0" y="0.0" width="8" height="22"/>
+            <rect key="frame" x="0.0" y="0.0" width="75" height="41"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <state key="normal" image="previous.png">
@@ -137,6 +264,7 @@
             <connections>
                 <action selector="nextOrPreviourSlideImageViewPreessed:" destination="-1" eventType="touchUpInside" id="idK-KQ-780"/>
             </connections>
+            <point key="canvasLocation" x="511.5" y="-340.5"/>
         </button>
         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TPy-5d-qsl">
             <rect key="frame" x="0.0" y="0.0" width="80" height="45"/>
@@ -149,6 +277,7 @@
             <connections>
                 <action selector="nextOrPreviourSlideImageViewPreessed:" destination="-1" eventType="touchUpInside" id="y4E-Gr-hBD"/>
             </connections>
+            <point key="canvasLocation" x="514" y="-184.5"/>
         </button>
         <view contentMode="scaleToFill" id="Gy5-r6-LE8">
             <rect key="frame" x="0.0" y="0.0" width="320" height="134"/>
@@ -230,21 +359,26 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="653" y="90"/>
+            <point key="canvasLocation" x="-117" y="742"/>
         </view>
     </objects>
     <resources>
         <image name="Canhbao_GT.png" width="64" height="52"/>
         <image name="anh_button.png" width="19" height="14"/>
+        <image name="anhgiai.png" width="32" height="29"/>
         <image name="atgt_button.png" width="32" height="38"/>
+        <image name="backgroud_title.png" width="372" height="25"/>
+        <image name="bienbao.png" width="64" height="63"/>
         <image name="donggop.png" width="65" height="50"/>
         <image name="gioithieu.png" width="32" height="31"/>
         <image name="ic_menu.png" width="22" height="14"/>
         <image name="next.png" width="8" height="13"/>
         <image name="previous.png" width="8" height="13"/>
         <image name="row4.png" width="10" height="16"/>
+        <image name="thuvien.png" width="64" height="56"/>
         <image name="thuvien_button.png" width="29" height="30"/>
         <image name="ytuong_button.png" width="32" height="35"/>
+        <image name="ytuongdatgiai.png" width="32" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
