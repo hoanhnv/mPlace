@@ -169,8 +169,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
         case 1:
         {
             //Tu van tour
-            _navigation.viewControllers = [NSArray arrayWithObjects:_home, nil];
-             
+            _navigation.viewControllers = [NSArray arrayWithObjects:_tuVanTour, nil];
         }
             break;
         case 2:
@@ -208,6 +207,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
             break;
         case 7:
         {
+            _navigation.viewControllers = [NSArray arrayWithObjects:_amNhac, nil];
             ;//am nhac
         }
             break;

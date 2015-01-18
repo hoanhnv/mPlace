@@ -34,4 +34,17 @@
 }
 */
 
+- (IBAction)showLeftMenu:(id)sender {
+    
+    [Appdelegate toggleMenu];
+}
+
+- (IBAction)doSearch:(id)sender {
+    
+}
+
+- (IBAction)doAddImage:(id)sender {
+}
+- (IBAction)doDangTin:(id)sender {
+}
 @end
