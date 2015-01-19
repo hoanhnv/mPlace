@@ -216,6 +216,11 @@
 		6FD6C6721A60D58A00F57F1F /* NVTuVanTourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD6C6701A60D58A00F57F1F /* NVTuVanTourViewController.xib */; };
 		6FD6C6761A60D97B00F57F1F /* NVThuVienViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6C6741A60D97B00F57F1F /* NVThuVienViewController.m */; };
 		6FD6C6771A60D97B00F57F1F /* NVThuVienViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD6C6751A60D97B00F57F1F /* NVThuVienViewController.xib */; };
+		6FE02EED1A6D408800E2AFC2 /* NVImage360.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE02EEC1A6D408800E2AFC2 /* NVImage360.m */; };
+		6FE02EF31A6D429400E2AFC2 /* NVHome360BO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE02EF21A6D429400E2AFC2 /* NVHome360BO.m */; };
+		6FE02EF61A6D42AB00E2AFC2 /* NVHome360Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE02EF51A6D42AB00E2AFC2 /* NVHome360Database.m */; };
+		6FE02EF91A6D42C400E2AFC2 /* NVGetHome360Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE02EF81A6D42C400E2AFC2 /* NVGetHome360Service.m */; };
+		6FE02F031A6D4ECA00E2AFC2 /* NVImageRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE02F021A6D4ECA00E2AFC2 /* NVImageRandom.m */; };
 		6FE608031A544AF5004FC077 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE608021A544AF5004FC077 /* FacebookSDK.framework */; };
 		F709BB1E1A28783000B0BC89 /* banner_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F709BB1D1A28783000B0BC89 /* banner_bg.png */; };
 		F709BB201A287B2600B0BC89 /* banner_detail.png in Resources */ = {isa = PBXBuildFile; fileRef = F709BB1F1A287B2600B0BC89 /* banner_detail.png */; };
@@ -758,6 +763,16 @@
 		6FD6C6731A60D97B00F57F1F /* NVThuVienViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVThuVienViewController.h; sourceTree = "<group>"; };
 		6FD6C6741A60D97B00F57F1F /* NVThuVienViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVThuVienViewController.m; sourceTree = "<group>"; };
 		6FD6C6751A60D97B00F57F1F /* NVThuVienViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NVThuVienViewController.xib; sourceTree = "<group>"; };
+		6FE02EEB1A6D408800E2AFC2 /* NVImage360.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVImage360.h; sourceTree = "<group>"; };
+		6FE02EEC1A6D408800E2AFC2 /* NVImage360.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVImage360.m; sourceTree = "<group>"; };
+		6FE02EF11A6D429400E2AFC2 /* NVHome360BO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVHome360BO.h; sourceTree = "<group>"; };
+		6FE02EF21A6D429400E2AFC2 /* NVHome360BO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVHome360BO.m; sourceTree = "<group>"; };
+		6FE02EF41A6D42AB00E2AFC2 /* NVHome360Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVHome360Database.h; sourceTree = "<group>"; };
+		6FE02EF51A6D42AB00E2AFC2 /* NVHome360Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVHome360Database.m; sourceTree = "<group>"; };
+		6FE02EF71A6D42C400E2AFC2 /* NVGetHome360Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVGetHome360Service.h; sourceTree = "<group>"; };
+		6FE02EF81A6D42C400E2AFC2 /* NVGetHome360Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVGetHome360Service.m; sourceTree = "<group>"; };
+		6FE02F011A6D4ECA00E2AFC2 /* NVImageRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVImageRandom.h; sourceTree = "<group>"; };
+		6FE02F021A6D4ECA00E2AFC2 /* NVImageRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVImageRandom.m; sourceTree = "<group>"; };
 		6FE608021A544AF5004FC077 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		F709BB1D1A28783000B0BC89 /* banner_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_bg.png; sourceTree = "<group>"; };
 		F709BB1F1A287B2600B0BC89 /* banner_detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_detail.png; sourceTree = "<group>"; };
@@ -1876,6 +1891,8 @@
 				6F42BE591A62CB0600FA430D /* NVAnhCanhBaoDatabase.m */,
 				6F42BE5B1A62CB1800FA430D /* NVYTuongDataBase.h */,
 				6F42BE5C1A62CB1800FA430D /* NVYTuongDataBase.m */,
+				6FE02EF41A6D42AB00E2AFC2 /* NVHome360Database.h */,
+				6FE02EF51A6D42AB00E2AFC2 /* NVHome360Database.m */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -1901,6 +1918,8 @@
 				6F42BE531A62CACD00FA430D /* NVGetAnhCanhBaoService.m */,
 				6F42BE551A62CADE00FA430D /* NVGetYTuongService.h */,
 				6F42BE561A62CADE00FA430D /* NVGetYTuongService.m */,
+				6FE02EF71A6D42C400E2AFC2 /* NVGetHome360Service.h */,
+				6FE02EF81A6D42C400E2AFC2 /* NVGetHome360Service.m */,
 			);
 			path = SAO;
 			sourceTree = "<group>";
@@ -1932,6 +1951,10 @@
 				6FD6C6641A60CDB100F57F1F /* NVTour.m */,
 				6FD6C6661A60CDD100F57F1F /* NVThuVien.h */,
 				6FD6C6671A60CDD100F57F1F /* NVThuVien.m */,
+				6FE02EEB1A6D408800E2AFC2 /* NVImage360.h */,
+				6FE02EEC1A6D408800E2AFC2 /* NVImage360.m */,
+				6FE02F011A6D4ECA00E2AFC2 /* NVImageRandom.h */,
+				6FE02F021A6D4ECA00E2AFC2 /* NVImageRandom.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2061,6 +2084,8 @@
 				6F42BE4D1A62CA9D00FA430D /* NVYTuongBO.m */,
 				6F42BE4F1A62CAAE00FA430D /* NVAnhCanhBaoBO.h */,
 				6F42BE501A62CAAE00FA430D /* NVAnhCanhBaoBO.m */,
+				6FE02EF11A6D429400E2AFC2 /* NVHome360BO.h */,
+				6FE02EF21A6D429400E2AFC2 /* NVHome360BO.m */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -2629,9 +2654,11 @@
 				F714258519D50D3A0068B5FA /* AFSecurityPolicy.m in Sources */,
 				F7DA979F19D40B090060F551 /* NVDetailDiaDiemViewController.m in Sources */,
 				F73057C21A01E649009B6FC1 /* NVGetTinTucService.m in Sources */,
+				6FE02EF91A6D42C400E2AFC2 /* NVGetHome360Service.m in Sources */,
 				F7556FBE1A19FA0C0038D8D4 /* NVLoginWifiViewController.m in Sources */,
 				6FC1F99F1A6BA340005A06D4 /* NVCollectionViewAlignLayout.m in Sources */,
 				F714258B19D50D3A0068B5FA /* FMDatabase.m in Sources */,
+				6FE02EF61A6D42AB00E2AFC2 /* NVHome360Database.m in Sources */,
 				6F42BE541A62CACD00FA430D /* NVGetAnhCanhBaoService.m in Sources */,
 				F71425B019D50D3A0068B5FA /* UIProgressView+AFNetworking.m in Sources */,
 				F714258219D50D3A0068B5FA /* AFHTTPRequestOperationManager.m in Sources */,
@@ -2738,7 +2765,9 @@
 				F714258E19D50D3A0068B5FA /* FMDatabaseQueue.m in Sources */,
 				F744667619DA9D1800E6B044 /* NVListAllLocationViewController.m in Sources */,
 				6FD6C6651A60CDB100F57F1F /* NVTour.m in Sources */,
+				6FE02F031A6D4ECA00E2AFC2 /* NVImageRandom.m in Sources */,
 				F71425B319D50D3A0068B5FA /* IISideController.m in Sources */,
+				6FE02EED1A6D408800E2AFC2 /* NVImage360.m in Sources */,
 				F73C0FB91A16E5160032C487 /* NVTyGiaViewController.m in Sources */,
 				F71425A719D50D3A0068B5FA /* KASlideShow.m in Sources */,
 				F71425A219D50D3A0068B5FA /* Reachability.m in Sources */,
@@ -2748,6 +2777,7 @@
 				F71425AB19D50D3A0068B5FA /* AFNetworkActivityIndicatorManager.m in Sources */,
 				F7D110E519DA46E700FA0DDD /* NVImage.m in Sources */,
 				6F42BE3C1A62C8C200FA430D /* NVThuVienBO.m in Sources */,
+				6FE02EF31A6D429400E2AFC2 /* NVHome360BO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

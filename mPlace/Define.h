@@ -92,6 +92,10 @@
 
 #define SERVICE_GET_CATEGORIES_NEWS @"api/getArticlesCategories?id=0"
 
+
+#define SERVICE_GET_ANH_DOAT_GIAI @"/api/ImageAward?page_number=1&page_size=10"
+#define SERVICE_GET_YTUONG_DPAT_GIAI @"api/IdeasAward?page_number=1&page_size=10"
+#define SERVICE_GET_ANH_RANDOM @"api/RandomTraffic?page_number=1&page_size=10"
 #endif
 
 
