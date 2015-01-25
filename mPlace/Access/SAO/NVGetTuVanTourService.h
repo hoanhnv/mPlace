@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^failCompletion)(NSError*err);
+typedef void(^completion)(id dataResponse);
+
 @interface NVGetTuVanTourService : NSObject
--(void)allTours:(void(^)(id listTour))completion:(void(^)(NSError *error))withFailed;
++ (void) getListTour:(NSInteger) pageNumber andCompleSucces:(completion) success andFauil:(failCompletion) fail;
+
 @end

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface NVChiTietThuVienViewController : UIViewController{
+#import "NVTrafficLibrary.h"
+@interface NVChiTietThuVienViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>{
     
 }
-
+@property (strong, nonatomic) NVTrafficLibrary *objectPresentation;
+@property (weak, nonatomic) IBOutlet UIWebView *myWebView;
+@property (strong, nonatomic) IBOutlet UIView *vListMore;
 @end

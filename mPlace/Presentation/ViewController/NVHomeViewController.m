@@ -85,11 +85,11 @@
     isScheduling = FALSE;
     statusNetwork = [Ultility checkNetwork];
     self.navigationController.navigationBarHidden = YES;
-    //[self initView];
-   // [self getDataBienDao];
-   // [self getDataTinTuc];
-    //UIImage * image = [Ultility imageWithView:_viewHome];
-    //UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    [self initView];
+    [self getDataBienDao];
+    [self getDataTinTuc];
+    UIImage * image = [Ultility imageWithView:_viewHome];
+    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
     // Do any additional setup after loading the view from its nib.
 }
 

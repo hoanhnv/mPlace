@@ -9,12 +9,4 @@
 #import "NVThuVienBO.h"
 
 @implementation NVThuVienBO
-
-+(void)allThuVien:(void (^)(id))completion withFailed:(void (^)(NSError *))failed{
-    
-}
-
-+(NVThuVien *)detailThuVien:(int)thuvienId{
-    return nil;
-}
 @end

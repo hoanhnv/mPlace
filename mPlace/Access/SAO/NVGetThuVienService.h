@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NVTrafficLibrary.h"
 
 @interface NVGetThuVienService : NSObject
 
+-(void)getAllThuVien:(int)type withSubCate:(int)subCate withPageNumber:(int)page_number
+        withPageSize:(int)pageSize withMonth:(int)month withYear:(int)year
+          andSuccess:(completion)succes andFailure:(failCompletion)failure;
+
+-(void)getThuVienById:(int)thuVienId andSuccess:(completion)succes
+          andFailure:(failCompletion)failure;
+-(void)getDanhMucThuVien:(completion)succes andFailure:(failCompletion)failure;
 @end

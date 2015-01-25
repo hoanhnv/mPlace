@@ -8,18 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "iCarousel.h"
-
+#import "NVHome360BO.h"
+#import "NVImageRandom.h"
 @interface NV360ViewController : UIViewController{
-    
+    NVHome360BO *serviceAPI;
 }
 @property (weak, nonatomic) IBOutlet UIView *vTopHeader;
 @property (weak, nonatomic) IBOutlet UIScrollView *vMainView;
 @property (weak, nonatomic) IBOutlet iCarousel *vSlideShow;
 @property (weak, nonatomic) IBOutlet UIButton *previourtButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
-
-
-
 
 @property (strong, nonatomic) IBOutlet UIView *vMenuButton;
 @property (weak, nonatomic) IBOutlet UICollectionView *listImageCollectionView;

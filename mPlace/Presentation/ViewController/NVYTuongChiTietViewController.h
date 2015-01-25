@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NVIdeasAward.h"
 
 @interface NVYTuongChiTietViewController : UIViewController
+@property (strong, nonatomic) NVIdeasAward *objectPresentation;
 
+- (IBAction)doDangYtuongClick:(id)sender;
+- (IBAction)showLeftMenu:(id)sender;
+- (IBAction)doSearch:(id)sender;
 @end

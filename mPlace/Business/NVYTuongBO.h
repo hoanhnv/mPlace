@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface NVYTuongBO : NSObject
-
+-(void)getAllYTuong:(int)type withPageNumber:(int)page_number withMonth:(int)month
+           withYear:(int)year andSuccess:(completion)succes andFailure:(failCompletion)failure;
+-(void)getYtuongById:(int)ytuongId andSuccess:(completion)succes
+          andFailure:(failCompletion)failure;
 @end

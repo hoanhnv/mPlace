@@ -7,32 +7,67 @@
 //
 
 #import "NVTuVanTourViewController.h"
+#import "NVTourCollectionViewCell.h"
+#import "NVCollectionViewAlignLayout.h"
+#import "NVGetTuVanTourService.h"
+#import "NVTour.h"
+#import "SVPullToRefresh.h"
+#import "MBProgressHUD.h"
+#import "NVTuVanTourChiTietViewController.h"
+
+#define CellWidthTourt 148
+#define CellHeigTour 204
+
 
 @interface NVTuVanTourViewController ()
-
+@property (nonatomic,strong) NSMutableArray *listTour;
 @end
 
 @implementation NVTuVanTourViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.listTour = [NSMutableArray array];
+    [self setupCollectioView];
+    [self loadListTour];
+    
+    __weak NVTuVanTourViewController *weakSelf = self;
+    // loadmore
+    [self.tourCollectionView addInfiniteScrollingWithActionHandler:^{
+        [weakSelf loadListTour];
+        weakSelf.tourCollectionView.showsInfiniteScrolling = YES;
+    }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) showLeftMenu:(id)sender {
+    [Appdelegate toggleMenu];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) loadListTour {
+    NSInteger pageNumber = self.listTour.count/10 + 1;
+    self.noData.hidden = YES;
+    [NVGetTuVanTourService getListTour:pageNumber andCompleSucces:^(id dataResponse) {
+        [self.listTour addObjectsFromArray:dataResponse];
+        [self.tourCollectionView reloadData];
+        if (self.listTour.count) {
+            self.noData.hidden = YES;
+        } else {
+            self.noData.hidden = NO;
+        }
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        [self.tourCollectionView.infiniteScrollingView stopAnimating];
+    } andFauil:^(NSError *err) {
+        if (self.listTour.count) {
+            self.noData.hidden = YES;
+        } else {
+            self.noData.hidden = NO;
+        }
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        [self.tourCollectionView.infiniteScrollingView stopAnimating];
+    }];
 }
-*/
+
 -(void)prepareComponentViews{
     self.vMiddleBG.backgroundColor = [UIColor colorWithRed:231.0f/255 green:66/255.0f blue:37/255.0f alpha:1.0];
 }
@@ -46,7 +81,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 4;
+    return self.listTour.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -62,11 +97,37 @@
     //        [cell configCellWithObject:nil];
     //        return cell;
     //    }
-    return nil;
+    
+    
+        NVTourCollectionViewCell *cell = (NVTourCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([NVTourCollectionViewCell class]) forIndexPath:indexPath];
+    NVTour *tourObject = [self.listTour objectAtIndex:indexPath.row];
+        [cell setCellData:tourObject];
+        return cell; 
 }
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeZero;
-    //    return [[NVAnhCollectionViewCell new]getCellSizeWithItem:indexPath.row];
+    return CGSizeMake(CellWidthTourt, CellHeigTour);
 }
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NVTuVanTourChiTietViewController*chitietVC = [[NVTuVanTourChiTietViewController alloc]initWithNibName:@"NVTuVanTourChiTietViewController" bundle:nil];
+    chitietVC.tourObejct = [self.listTour objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:chitietVC animated:YES];
+}
+
+
+-(void)setupCollectioView{
+//    NVCollectionViewAlignLayout *layoutAnh = [[NVCollectionViewAlignLayout alloc]init];
+//    layoutAnh.minimumInteritemSpacing = 8.0f;
+//    //flowLayout.minimumLineSpacing = 10.0f;
+//    layoutAnh.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+//    layoutAnh.itemSize = CGSizeMake(CellWidthTourt, CellHeigTour);
+//    layoutAnh.scrollDirection = UICollectionViewScrollDirectionVertical;
+    
+//    self.tourCollectionView.collectionViewLayout = layoutAnh;
+    [self.tourCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([NVTourCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([NVTourCollectionViewCell class])];
+}
+
 
 @end

@@ -7,34 +7,23 @@
 //
 
 #import "NVAnhCollectionViewCell.h"
-
+#import "NVImageDoatGiai.h"
 @implementation NVAnhCollectionViewCell
 
 - (void)awakeFromNib {
     // Initialization code
     self.backgroundColor = [UIColor whiteColor];
 }
--(int)configCellWithObject:(int)index{
+-(int)configCellWithObject:(NVImageDoatGiai*)obj{
     float heightTemp = 0;
-    imgTitle.image = [UIImage imageNamed:@"tin4_4.png"];
+    [imgTitle setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",DOMAIN_MPLACE, obj.avatar_url]]];
     heightTemp += imgTitle.frame.size.height;
     
-    lbTitle.numberOfLines = 0; // allows label to have as many lines as needed
-    if (index == 3) {
-        lbTitle.text = @"working examples of table views with variable row heights due to table ";
-    }
-    else if(index == 6){
-         lbTitle.text = @"working examples of table views with variable row heightsof table views with variable row heightsof table views with variable row heights";
-    }
-    else if(index == 5){
-        lbTitle.text = @"working examples ";
-    }
-    else{
-        lbTitle.text = @"Phòng tránh tai nạn giao thông";
-    }
-    [lbTitle sizeToFit];
+    lbTitle.numberOfLines = 3; // allows label to have as many lines as needed
+    lbTitle.text = obj.titleDoatGiai;
+    //[lbTitle sizeToFit];
     heightTemp += lbTitle.frame.size.height;
-    lbPlace.text = @"Cau Giay - Ha Noi";
+    lbPlace.text = obj.address;
      CGRect fPlace = lbPlace.frame;
     fPlace.origin.y = CGRectGetMaxY(lbTitle.frame);
     lbPlace.frame = fPlace;

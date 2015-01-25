@@ -7,12 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NVThuVien.h"
+#import "NVTrafficLibrary.h"
+#import "NVGetThuVienService.h"
 
 @interface NVThuVienBO : NSObject
-
-+(void)allThuVien:(void(^)(id listThuVien))completion withFailed:(void(^)(NSError *error))failed;
-
-+(NVThuVien*)detailThuVien:(int)thuvienId;
 
 @end

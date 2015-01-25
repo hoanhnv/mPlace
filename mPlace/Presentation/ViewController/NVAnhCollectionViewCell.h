@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NVImageDoatGiai.h"
 @interface NVAnhCollectionViewCell : UICollectionViewCell{
     __weak IBOutlet UIImageView *imgTitle;
     __weak IBOutlet UILabel *lbTitle;
     __weak IBOutlet UILabel *lbPlace;
 }
 
--(int)configCellWithObject:(int)index;
+-(int)configCellWithObject:(NVImageDoatGiai*)obj;
 +(CGSize)getCellSizeWithItem:(int)index;
 
 @end

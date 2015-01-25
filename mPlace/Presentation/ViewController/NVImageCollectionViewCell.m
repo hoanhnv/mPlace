@@ -7,7 +7,7 @@
 //
 
 #import "NVImageCollectionViewCell.h"
-
+#import "EXPhotoViewer.h"
 @implementation NVImageCollectionViewCell
 
 - (id)initWithFrame:(CGRect)frame
@@ -28,4 +28,7 @@
 }
 */
 
+- (IBAction)onButtonTap:(id)sender {
+    [EXPhotoViewer showImageFrom:self.imgContent];
+}
 @end

@@ -94,8 +94,29 @@
 
 
 #define SERVICE_GET_ANH_DOAT_GIAI @"/api/ImageAward?page_number=1&page_size=10"
-#define SERVICE_GET_YTUONG_DPAT_GIAI @"api/IdeasAward?page_number=1&page_size=10"
-#define SERVICE_GET_ANH_RANDOM @"api/RandomTraffic?page_number=1&page_size=10"
+#define SERVICE_GET_YTUONG_DPAT_GIAI @"/api/IdeasAward?page_number=1&page_size=10"
+#define SERVICE_GET_ANH_RANDOM @"/api/RandomTraffic?page_number=1&page_size=10"
+#define SERVICE_GET_ALLYTUONG @"/api/Ideas?"
+#define SERVICE_GET_YTUONG_BYID @"/api/IdeasDetail/"
+
+#define SERVICE_GET_LIST_IMAGE_WARNING @"/api/ImagesWarning?"
+#define SERVICE_ANHCANHBAO_CHITIET @"/api/ImagesWarningDetail/"
+#define SERVICE_UPLOAD_ANHCANHBAO @"/api/UploadImageWarning"
+#define SERVICE_GET_THUVIEN @"/api/TrafficLibrary"
+#define SERVICE_GET_THUVIEN_BYID @"/api/TrafficLibraryDetail/"
+#define SERVICE_GET_RULE @"/api/rule"
+
+#define SERVICE_GET_LIST_TRAFIC @"/api/TrafficCategory?"
+#define SERVICE_GET_LIST_TOUR @"/api/TourHome?page_size=10&"
+#define SERVICE_GET_LIST_MUSIC @"/api/Music?page_size=10&"
+#define SERVICE_GET_DETAIL_MUSIC @"http://mplace.vn/api/MusicDetail/%@?device_type=1&version=%@"
+
+#define SERVICE_GET_LIST_WARNING @"http://mplace.vn/api/TrafficSigns"
+#define SERVICE_GET_TRAFICSING_DETAIL @"/api/TrafficSignsDetail/%@"
+#define SERVICE_GET_DANHMUC_THUVIEN @"/api/TrafficSubCategory"
+#define SERVICE_GET_DANHMUC_BIENBAO @""
+
+#define STRING_EMPTY @""
 #endif
 
 

@@ -12,7 +12,7 @@
 #import "GAIDictionaryBuilder.h"
 #import "NVCategory.h"
 #import "NVCity.h"
-
+//UISearchControllerDelegate in ios 8
 @interface NVFilterViewController : GAITrackedViewController<UISearchControllerDelegate,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>{
 
     IBOutlet UISearchBar * _searchBar;

@@ -8,13 +8,16 @@
 
 #import "NVYtuongCollectionViewCell.h"
 
+
 @implementation NVYtuongCollectionViewCell
 
 - (void)awakeFromNib {
     // Initialization code
     self.backgroundColor = [UIColor whiteColor];
 }
--(void)configCellWithObject:(NSObject*)obj{
-    
+-(void)configCellWithObject:(NVIdeasAward*)obj{
+    self.lbTitle.text = obj.title;
+    self.lbDescription.text = obj.content;
 }
+
 @end

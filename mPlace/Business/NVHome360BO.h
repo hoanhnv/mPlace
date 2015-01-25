@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NVGetHome360Service.h"
 
 @interface NVHome360BO : NSObject
+
+-(void)getAnhDoatGiai:(completion)succes andFailure:(failCompletion)failure;
+-(void)getYTuongDoatGiai:(completion)succes andFailure:(failCompletion)failure;
+-(void)getRandomImage:(completion)succes andFailure:(failCompletion)failure;
 
 @end

@@ -18,8 +18,11 @@
 @property(nonatomic, strong) NSString *title;
 @property(nonatomic, readwrite) int status;
 @property(nonatomic, strong) NSString *content;
-@property(nonatomic, readwrite) int *address;
+@property(nonatomic, strong) NSString *address;
 @property(nonatomic, strong) NSString *created_at;
 @property(nonatomic, strong) NSString *occurred_at;
 @property(nonatomic, strong) NSString *avatar_url;
+
++(NVImageRandom *)initWithFrom:(NSDictionary *)dict;
+-(NSString*)getUrlImage;
 @end

@@ -10,5 +10,6 @@
 
 @interface NVImageCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imgContent;
+- (IBAction)onButtonTap:(id)sender;
 
 @end

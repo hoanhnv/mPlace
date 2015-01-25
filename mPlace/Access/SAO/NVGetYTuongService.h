@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "NVIdeasAward.h"
 @interface NVGetYTuongService : NSObject
+-(void)getAllYTuong:(int)type withPageNumber:(int)page_number withPageSize:(int)pageSize withMonth:(int)month
+           withYear:(int)year andSuccess:(completion)succes andFailure:(failCompletion)failure;
+-(void)getYtuongById:(int)ytuongId andSuccess:(completion)succes
+          andFailure:(failCompletion)failure;
 
 @end

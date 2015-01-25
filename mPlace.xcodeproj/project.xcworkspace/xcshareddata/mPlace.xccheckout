@@ -10,41 +10,43 @@
 	<string>mPlace</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>3aff56c5-f96c-4356-9350-2b942dd1c2f0</key>
-		<string>http://xuanmai.hostingviet.vn/svn/dulich</string>
-		<key>540e74b4-00b2-4778-9a24-93a2ddde797d</key>
-		<string>http://192.168.12.140/svn_data</string>
+		<key>6DD6354076B92902B2C3835D18DA61B6D8E6F34B</key>
+		<string>https://bitbucket.org/hoanhnv/mplace.git</string>
+		<key>BD5AC77BF2342B4AB90392714F941448312CCD2A</key>
+		<string>https://github.com/hoanhnv/mPlace.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>mPlace/IOS/mPlace_current/mPlace/mPlace.xcodeproj</string>
+	<string>mPlace.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>3aff56c5-f96c-4356-9350-2b942dd1c2f0</key>
-		<string>../../../../../../../dulichsvn</string>
-		<key>540e74b4-00b2-4778-9a24-93a2ddde797d</key>
-		<string>../../../../../..</string>
+		<key>6DD6354076B92902B2C3835D18DA61B6D8E6F34B</key>
+		<string>../..</string>
+		<key>BD5AC77BF2342B4AB90392714F941448312CCD2A</key>
+		<string>../../..</string>
 	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/hoanhnv/mplace.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>540e74b4-00b2-4778-9a24-93a2ddde797d</string>
+	<string>6DD6354076B92902B2C3835D18DA61B6D8E6F34B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>3aff56c5-f96c-4356-9350-2b942dd1c2f0</string>
+			<string>BD5AC77BF2342B4AB90392714F941448312CCD2A</string>
 			<key>IDESourceControlWCCName</key>
-			<string>dulichsvn</string>
+			<string></string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>540e74b4-00b2-4778-9a24-93a2ddde797d</string>
+			<string>6DD6354076B92902B2C3835D18DA61B6D8E6F34B</string>
 			<key>IDESourceControlWCCName</key>
-			<string>NamVietSVN</string>
+			<string>mPlace</string>
 		</dict>
 	</array>
 </dict>

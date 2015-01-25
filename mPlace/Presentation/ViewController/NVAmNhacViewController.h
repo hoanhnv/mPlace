@@ -10,4 +10,12 @@
 
 @interface NVAmNhacViewController : UIViewController
 
+
+- (IBAction)showLeftMenu:(id)sender;
+
+
+@property (weak, nonatomic) IBOutlet UICollectionView *musicCollectionView;
+@property (weak, nonatomic) IBOutlet UILabel *noData;
+
+
 @end

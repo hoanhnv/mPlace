@@ -50,4 +50,8 @@
 + (UIImage *) imageWithView:(UIView *)view;
 + (void)showAlertNetWork;
 + (void)eventGoogleAnalytic:(NSString *) nameEvent :(NSInteger) tag;
+
++(BOOL)stringEmpty:(NSString*)string;
++(BOOL)stringNull:(NSString*)string;
++(BOOL)stringNullOrEmpty:(NSString*)string;
 @end

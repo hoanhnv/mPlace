@@ -13,6 +13,12 @@
 #import "NVYtuongCollectionViewCell.h"
 #import "NVCollectionViewAlignLayout.h"
 #import "NVThuVienViewController.h"
+#import "NVGetHome360Service.h"
+#import "NVYTuongChiTietViewController.h"
+#import "NVAnhChiTietViewController.h"
+#import "NVRuleViewController.h"
+#import "NVIdeasAward.h"
+#import "NVBienBaoViewController.h"
 
 #define TagCollectionViewAnh 226
 #define TagCollectionViewYtuong 227
@@ -24,6 +30,9 @@
 
 @interface NV360ViewController ()
 @property (nonatomic,strong) NSMutableArray *slideListRoot;
+@property (nonatomic,strong) NSMutableArray *lstImageMost;
+@property (nonatomic,strong) NSMutableArray *lstImageRandom;
+@property (nonatomic,strong) NSMutableArray *lstIdeaMost;
 @end
 
 @implementation NV360ViewController
@@ -32,9 +41,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self prepareComponentViews];
-    [self loadDataToComponentViews];
-    [self loadListSlideShowImageView];
     [self setupCollectioView];
+    [self loadDataToComponentViews];
     
 }
 
@@ -66,10 +74,10 @@
     self.vMenuButton.frame = CGRectMake(0, CGRectGetMaxY(self.vSlideShow.frame), rectMain.size.width, 78);
     [self.vMainView addSubview:self.vMenuButton];
     
-    self.vImageMost.frame = CGRectMake(0, CGRectGetMaxY(self.vMenuButton.frame), rectMain.size.width, 446);
+    self.vImageMost.frame = CGRectMake(0, CGRectGetMaxY(self.vMenuButton.frame) +8, rectMain.size.width, 425);
     [self.vMainView addSubview:self.vImageMost];
     
-    self.vIdeaMost.frame = CGRectMake(0, CGRectGetMaxY(self.vImageMost.frame), rectMain.size.width, 258);
+    self.vIdeaMost.frame = CGRectMake(0, CGRectGetMaxY(self.vImageMost.frame) + 2, rectMain.size.width, 276);
     [self.vMainView addSubview:self.vIdeaMost];
     
     self.vMenuBottom.frame = CGRectMake(0, CGRectGetMaxY(self.vIdeaMost.frame), rectMain.size.width, 120);
@@ -78,13 +86,17 @@
     [self.vMainView setContentSize:CGSizeMake(rectMain.size.width, CGRectGetMaxY(self.vMenuBottom.frame)+20)];
 }
 -(void)loadDataToComponentViews{
+    serviceAPI = [[NVHome360BO alloc]init];
+    [self reloadAnhDoatGiai];
+    [self reloadYtuongDoatGiai];
+    [self reloadAnhRandom];
     
 }
 -(void)setupCollectioView{
     NVCollectionViewAlignLayout *layoutAnh = [[NVCollectionViewAlignLayout alloc]init];
     layoutAnh.minimumInteritemSpacing = 8.0f;
     //flowLayout.minimumLineSpacing = 10.0f;
-    layoutAnh.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    layoutAnh.sectionInset = UIEdgeInsetsMake(6.0, 0, 8.0, 0);
     layoutAnh.itemSize = CGSizeMake(CellWidth, CellAnhHeight);
     layoutAnh.scrollDirection = UICollectionViewScrollDirectionVertical;
     
@@ -94,22 +106,49 @@
     NVCollectionViewAlignLayout *layoutYtuong = [[NVCollectionViewAlignLayout alloc]init];
     layoutYtuong.minimumInteritemSpacing = 8.0;
     //flowLayout.minimumLineSpacing = 10.0f;
-    layoutYtuong.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    layoutYtuong.sectionInset = UIEdgeInsetsMake(6.0f, 0, 8.0f, 0);
     layoutYtuong.itemSize = CGSizeMake(CellWidth, CellYtuongHeight);
     layoutYtuong.scrollDirection = UICollectionViewScrollDirectionVertical;
 
     self.listYtuongCollectionView.collectionViewLayout = layoutYtuong;
     [self.listYtuongCollectionView registerNib:[UINib nibWithNibName:@"NVYtuongCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:CellIDYtuong];
-    
+}
+
+-(void)reloadAnhDoatGiai{
+    self.lstImageMost = [NSMutableArray array];
+    [serviceAPI getAnhDoatGiai:^(NSMutableArray* lstData){
+        self.lstImageMost = (NSMutableArray*)lstData;
+        [self.listImageCollectionView reloadData];
+    } andFailure:^(NSError *err){
+        NSLog(@"No data");
+    }];
+}
+-(void)reloadAnhRandom{
+    self.lstIdeaMost = [NSMutableArray array];
+    [serviceAPI getRandomImage:^(NSMutableArray* lstData){
+        self.lstImageRandom = (NSMutableArray*)lstData;
+        [self loadListSlideShowImageView];
+    } andFailure:^(NSError *err){
+        NSLog(@"No data");
+    }];
+}
+-(void)reloadYtuongDoatGiai{
+    self.lstIdeaMost = [NSMutableArray array];
+    [serviceAPI getYTuongDoatGiai:^(NSMutableArray* lstData){
+        self.lstIdeaMost = (NSMutableArray*)lstData;
+        [self.listYtuongCollectionView reloadData];
+    } andFailure:^(NSError *err){
+        NSLog(@"No data");
+    }];
 }
 - (void) loadListSlideShowImageView {
     self.vSlideShow.type = iCarouselTypeRotary;
     self.vSlideShow.decelerationRate = 0.5;
     self.slideListRoot = [NSMutableArray array];
-    for (int i = 0; i < 4; i ++) {
-        [self.slideListRoot addObject:@"http://dantri4.vcmedia.vn/YaR0wuBQNMhqdl8mV5Yccccccccccc/Image/2015/01/T2/hai-553c1.jpg"];
+    for (int i = 0; i<[self.lstImageRandom count]; i++) {
+        NVImageRandom *objRandom = ((NVImageRandom*)[self.lstImageRandom objectAtIndex:i]);
+        [self.slideListRoot addObject:[objRandom getUrlImage]];
     }
-    
     if (self.timer) {
         [self.timer invalidate];
         self.timer = nil;
@@ -119,7 +158,6 @@
                                                 selector:@selector(autoScroll)
                                                 userInfo:nil
                                                  repeats:YES];
-    
     
     [self.vSlideShow reloadData];
 }
@@ -132,6 +170,9 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
+    if (collectionView.tag == TagCollectionViewAnh) {
+        [self.lstImageMost count];
+    }
     return 4;
 }
 
@@ -139,17 +180,24 @@
 {
     float heightCell;
     if (collectionView.tag == TagCollectionViewAnh) {
-        NVAnhCollectionViewCell *cell = (NVAnhCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIDAnh forIndexPath:indexPath];
-        heightCell = [cell configCellWithObject:indexPath.row];
+        NVAnhCollectionViewCell *cell = (NVAnhCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIDAnh
+                                                                                                             forIndexPath:indexPath];
+        if ([self.lstImageMost count]) {
+            heightCell = [cell configCellWithObject:[self.lstImageMost objectAtIndex:indexPath.row]];
+        }
         return cell;
     }
     else{
-        NVYtuongCollectionViewCell *cell = (NVYtuongCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIDYtuong forIndexPath:indexPath];
-         [cell configCellWithObject:nil];
+        NVYtuongCollectionViewCell *cell = (NVYtuongCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIDYtuong
+                                                                                                                   forIndexPath:indexPath];
+        if ([self.lstIdeaMost count]) {
+            [cell configCellWithObject:[self.lstIdeaMost objectAtIndex:indexPath.row]];
+        }
         return cell;
     }
 }
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:
+(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (collectionView.tag == TagCollectionViewAnh) {
          return CGSizeMake(CellWidth,CellAnhHeight);
     }
@@ -159,6 +207,21 @@
     return CGSizeZero;
 //    return [[NVAnhCollectionViewCell new]getCellSizeWithItem:indexPath.row];
 }
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (collectionView.tag == TagCollectionViewAnh) {
+        NVAnhChiTietViewController*chitietVC = [[NVAnhChiTietViewController alloc]initWithNibName:@"NVAnhChiTietViewController" bundle:nil];
+        chitietVC.objectPresentation = (NVImageDoatGiai*) [self.lstImageMost objectAtIndex:indexPath.row];
+        [self.navigationController pushViewController:chitietVC animated:YES];
+    }
+    if (collectionView.tag == TagCollectionViewYtuong) {
+        NVYTuongChiTietViewController *chitietVC = [[NVYTuongChiTietViewController alloc]initWithNibName:@"NVYTuongChiTietViewController" bundle:nil];
+        chitietVC.objectPresentation = (NVIdeasAward*) [self.lstIdeaMost objectAtIndex:indexPath.row];
+        [self.navigationController pushViewController:chitietVC animated:YES];
+
+    }
+  }
 
 //- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
 //    return 10;
@@ -202,6 +265,8 @@
         }
         case 104:
         {
+            NVBienBaoViewController *bienBaoViewController = [[NVBienBaoViewController alloc] initWithNibName:NSStringFromClass([NVBienBaoViewController class]) bundle:nil];
+            [self.navigationController pushViewController:bienBaoViewController animated:YES];
             break;
         }
         default:
@@ -226,7 +291,8 @@
         }
         case 107:
         {
-            
+            NVRuleViewController *ruleVC = [[NVRuleViewController alloc]initWithNibName:@"NVRuleViewController" bundle:nil];
+            [self.navigationController pushViewController:ruleVC animated:YES];
             break;
         }
         default:
@@ -279,7 +345,7 @@
         //recycled and used with other index values later
         view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320.0f, 199.0f)];
         view.backgroundColor = [UIColor lightGrayColor];
-        view.contentMode = UIViewContentModeScaleAspectFill;
+        view.contentMode = UIViewContentModeScaleToFill;
         
         imageView = [[UIImageView alloc] initWithFrame:view.bounds];
         imageView.backgroundColor = [UIColor clearColor];
@@ -291,7 +357,7 @@
         imageView = (UIImageView *)[view viewWithTag:1];
     }
     NSString *slideImageString = self.slideListRoot[index];
-    [imageView setImageWithURL:[NSURL URLWithString:slideImageString] placeholderImage:[UIImage imageNamed:nil]];
+    [imageView setImageWithURL:[NSURL URLWithString:slideImageString] placeholderImage:[UIImage imageNamed:@"mPlace"]];
     
     return view;
 }

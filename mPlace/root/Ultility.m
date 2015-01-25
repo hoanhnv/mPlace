@@ -158,4 +158,27 @@ static Ultility * ultility = nil;
     [tracker send:event];
 }
 
++(BOOL)stringNull:(NSString*)string{
+    if(![string isEqual:[NSNull null]]&&![string isEqualToString:@"(null)"]&&![string isKindOfClass:(id)[NSNull null]]){
+        return NO;
+    }
+    else{
+        return YES;
+    }
+}
++(BOOL)stringEmpty:(NSString*)string{
+    
+    if ([self stringNull:string]||[string length]==0||[string isEqualToString:@""]) {
+        return YES;
+    }
+    else{
+        return NO;
+    }
+}
++(BOOL)stringNullOrEmpty:(NSString*)str{
+    if ([self stringEmpty:str]||[self stringNull:str]) {
+        return YES;
+    }
+    else return NO;
+}
 @end
